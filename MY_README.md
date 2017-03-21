@@ -17,9 +17,10 @@ __Components__
 5.  AddTodo
 
 __Creating the Root Component__
+
 Sec. 9, Lec. 87
 
-1.      In the webpack.config file, we can specify where webpack looks for components by defining the modulesDirectories array in the resolve object:
+1.   In the webpack.config file, we can specify where webpack looks for components by defining the modulesDirectories array in the resolve object:
     ```
         resolve: {
             modulesDirectories: ['actions', components', 'containers', 'reducers']
