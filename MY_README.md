@@ -3,9 +3,10 @@
 ### Tuesday, March 21, 2017
 
 _Goals_
+
 Create a real-world app that:
-1.      Persists data
-2.      Allows you to access your Todos anywhere
++  Persists data
++  Allows you to access your Todos anywhere
 
 _Components_
 1.      TodoApp - maintains entire application state (container)
