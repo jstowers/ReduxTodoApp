@@ -2,13 +2,13 @@
 
 ### Tuesday, March 21, 2017
 
-_Goals_
+__Goals__
 
 Create a real-world app that:
 +  Persists data
 +  Allows you to access your Todos anywhere
 
-_Components_
+__Components__
 
 1.  TodoApp - maintains entire application state (container)
 2.  Search
@@ -16,17 +16,16 @@ _Components_
 4.  Todo
 5.  AddTodo
 
-#### Creating the Root Component
+__Creating the Root Component__
 Sec. 9, Lec. 87
 
 1.      In the webpack.config file, we can specify where webpack looks for components by defining the modulesDirectories array in the resolve object:
-
-        ```
+    ```
         resolve: {
             modulesDirectories: ['actions', components', 'containers', 'reducers']
         },
 
-        ```
+    ```
 
 2.      Create addTodo action creator
 
