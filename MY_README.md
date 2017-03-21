@@ -9,11 +9,12 @@ Create a real-world app that:
 +  Allows you to access your Todos anywhere
 
 _Components_
-1.      TodoApp - maintains entire application state (container)
-2.      Search
-3.      TodoList
-4.      Todo
-5.      AddTodo
+
+1.  TodoApp - maintains entire application state (container)
+2.  Search
+3.  TodoList
+4.  Todo
+5.  AddTodo
 
 #### Creating the Root Component
 Sec. 9, Lec. 87
