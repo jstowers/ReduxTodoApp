@@ -11,5 +11,6 @@ export function addTodo(text) {
 		payload: {
 			id: nextTodoId++,
 			text: text
+		}
 	};
 }

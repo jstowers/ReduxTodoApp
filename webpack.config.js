@@ -17,15 +17,18 @@ module.exports = {
     }]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
-    modulesDirectories: [
-      'node_modules', 
-      'actions', 
-      'components', 
-      'containers']
+    extensions: ['', '.js', '.jsx']
   },
   devServer: {
     historyApiFallback: true,
     contentBase: './'
   }
 };
+
+/*
+    modulesDirectories: [
+      'node_modules', 
+      'actions', 
+      'components', 
+      'containers']
+*/
