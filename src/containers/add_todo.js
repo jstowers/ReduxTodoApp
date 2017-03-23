@@ -17,20 +17,15 @@ class AddTodo extends Component {
 
 	// sets state for change in todo item
 	onInputChange = (event) => {
-		console.log('onInputChange event =', event);
-
-		this.setState( { todoItem: event.target.value });
+		this.setState({ todoItem: event.target.value });
 	}
 
 	onFormSubmit = (event) => {
 
 		console.log('onFormSubmit event =', event);
-
 		event.preventDefault();
-
 		this.props.addTodo(this.state.todoItem);
-
-		this.setState({ term:'' });
+		this.setState({ todoItem:'' });
 	}
 
 	render() {
@@ -39,7 +34,7 @@ class AddTodo extends Component {
 				onSubmit={ this.onFormSubmit }
 				className="input-group">
 				<input 
-					placeholder="What do you want to do?"
+					placeholder="What needs to be done?"
 					className="form-control"
 					value={ this.state.todoItem }
 					onChange= { this.onInputChange } />
