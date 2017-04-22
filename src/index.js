@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 // import App component
 import App from './components/app';
 
-// imports rootReducer that can be passed to createStore
+// imports rootReducer that will be passed to createStore
 import reducer from './reducers/index';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
