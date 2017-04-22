@@ -5,13 +5,13 @@ import { ADD_TODO } from '../actions/index';
 
 export default function (state = [], action) {
 
+	console.log('state before =', state);
 	console.log('action =', action);
-	console.log('state before switch = ', state);
-
+	
 	switch (action.type) {
 		case ADD_TODO:
 			return [
-				action.payload.data, ...state
+				action.payload, ...state
 			];
 	}
 

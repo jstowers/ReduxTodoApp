@@ -4,11 +4,12 @@ import { Route, IndexRoute } from 'react-router';
 
 import App from './components/app';
 import TodoList from './components/todo_list';
+import AddTodo from './containers/add_todo';
 
 export default (
 
 	<Route path = "/" component = { App } >
-		<IndexRoute component = { TodoList } />
+		<IndexRoute component = { AddTodo } />
 	</Route>
 
 
