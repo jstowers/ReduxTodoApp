@@ -7,31 +7,18 @@ import { addTodo } from '../actions/index';
 
 class AddTodo extends Component {
 
-	constructor(props) {
-		super(props);
+	onSubmit = (event) => {
 
-		this.state = {
-			todoItem: ''
-		}
-	}
+		console.log('inside onSubmit event');
+		//event.preventDefault();
+		this.props.addTodo(event.target.value);
 
-	// sets state for change in todo item
-	onInputChange = (event) => {
-		this.setState({ todoItem: event.target.value });
-	}
-
-	onFormSubmit = (event) => {
-
-		console.log('onFormSubmit event =', event);
-		event.preventDefault();
-		this.props.addTodo(this.state.todoItem);
-		this.setState({ todoItem:'' });
 	}
 
 	render() {
 		return (
 			<form
-				onSubmit={ this.onFormSubmit }
+				onSubmit={ this.onSubmit }
 				className="input-group">
 				<input 
 					placeholder="What needs to be done?"
@@ -49,8 +36,4 @@ class AddTodo extends Component {
 	}
 }
 
-function mapDispatchToProps(dispatch) {
-	return bindActionCreators({ addTodo }, dispatch);
-}
-
-export default connect(null, mapDispatchToProps)(AddTodo);
+export default connect(null, { addTodo })(AddTodo);

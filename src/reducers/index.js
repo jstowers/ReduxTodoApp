@@ -1,5 +1,14 @@
 import { combineReducers } from 'redux';
+
+// Step 1: import reducer functions
 import TodoReducer from './reducer_addTodo';
+
+// Step 2: list reducers in combineReducers object
+const rootReducer = combineReducers({
+	todos: TodoReducer
+});
+
+export default rootReducer;
 
 /*
 const rootReducer = combineReducers({
@@ -28,13 +37,8 @@ reducers.
 
 */
 
-// Step 1: import reducer functions
-
-// Step 2: list reducers in combineReducers object
 
 
-const rootReducer = combineReducers({
-	todo: TodoReducer
-})
 
-export default rootReducer;
+
+
