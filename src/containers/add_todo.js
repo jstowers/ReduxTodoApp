@@ -54,9 +54,16 @@ class AddTodo extends Component {
 	}
 }
 
-// Hooks up our action creator addTodo to the AddTodo container
-function mapDispatchToProps(dispatch) {
-	return bindActionCreators({ addTodo }, dispatch);
-}
+/*
 
-export default connect(null, mapDispatchToProps)(AddTodo);
+
+connect([mapStateToProps], [mapDispatchToProps], [mergeProps], [options])
+
+It does not modify the component class passed to it; 
+instead, it returns a new, connected component class for you 
+to use.
+
+*/
+
+
+export default connect(null, { addTodo })(AddTodo);

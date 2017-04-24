@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// import action creator
+import { listTodos } from '../actions/index';
+
 class TodoList extends Component {
 
 	componentDidMount() {
@@ -8,6 +11,9 @@ class TodoList extends Component {
 	}
 
 	render() {
+
+		console.log('this.props =', this.props);
+
 		return (
 			<div>
 				THIS IS A TEST!
@@ -16,4 +22,8 @@ class TodoList extends Component {
 	}
 }
 
-export default connect()(TodoList);
+function mapStateToProps({ todos }) {
+	return todos;
+}
+
+export default connect(mapStateToProps)(TodoList);
