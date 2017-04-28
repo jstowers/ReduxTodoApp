@@ -54,8 +54,9 @@ class AddTodo extends Component {
 	}
 }
 
-/*
+export default connect(null, { addTodo })(AddTodo);
 
+/*
 
 connect([mapStateToProps], [mapDispatchToProps], [mergeProps], [options])
 
@@ -66,4 +67,3 @@ to use.
 */
 
 
-export default connect(null, { addTodo })(AddTodo);
